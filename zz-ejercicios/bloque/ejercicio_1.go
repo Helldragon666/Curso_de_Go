@@ -1,7 +1,6 @@
-package main
+package bloque
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -19,10 +18,4 @@ func ConvertirAInt(valor string) (int, string) {
 	} else {
 		return resultado, "Es menor a 100"
 	}
-}
-
-func main() {
-	numero, texto := ConvertirAInt("90g")
-	fmt.Println(numero)
-	fmt.Println(texto)
 }
