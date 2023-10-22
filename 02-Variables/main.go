@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+//import "fmt"
+import (
+	"fmt"
+
+	"github.com/Curso_de_Go/02-Variables/datos"
+)
 
 /*
 	Estructura:
@@ -16,4 +21,8 @@ func main() {
 	fmt.Println("variable1:", variable1)
 	fmt.Println("variable2:", variable2)
 	fmt.Println("variable3:", variable3)
+
+	// ===============================================================
+	datos.BooleanoGlobal = false
+	datos.MostrarDatos()
 }
