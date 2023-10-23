@@ -1,4 +1,4 @@
-package bloque
+package funcion
 
 import (
 	"bufio"
@@ -7,8 +7,10 @@ import (
 	"strconv"
 )
 
-func IngresarNumero() {
+func IngresarNumero() string {
+
 	escaner := bufio.NewScanner(os.Stdin)
+	var texto string
 
 	fmt.Print("Ingrese un número: ")
 	if escaner.Scan() {
@@ -20,12 +22,9 @@ func IngresarNumero() {
 		}
 
 		for i := 1; i <= 10; i++ {
-			//fmt.Println(numero, "X", i, "=", numero*i)
-			texto := fmt.Sprintf("%d X %d = %d", numero, i, numero*i)
-			fmt.Println(texto)
-
-			// o tambien
-			//fmt.Printf("%d X %d = %d", numero, i, numero * i)
+			texto += fmt.Sprintf("%d X %d = %d \n", numero, i, numero*i)
 		}
 	}
+
+	return texto
 }
